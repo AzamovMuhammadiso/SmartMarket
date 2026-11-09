@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namoz Vaqtlari</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #062c24, #0c5140, #123b32);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 15px;
+      }
+
+      .wrapper {
+        width: 100%;
+        max-width: 1000px;
+        text-align: center;
+      }
+
+      /* Header */
+
+      header {
+        color: white;
+        margin-bottom: 45px;
+      }
+
+      .logo {
+        font-size: 55px;
+        color: #f5d77a;
+        margin-bottom: 15px;
+      }
+
+      header h1 {
+        font-size: 38px;
+        margin-bottom: 12px;
+        letter-spacing: 1px;
+      }
+
+      header p {
+        color: #c4ddd3;
+        font-size: 16px;
+      }
+
+      /* Cards */
+
+      #container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        padding: 35px 20px;
+        backdrop-filter: blur(12px);
+        transition: 0.3s ease;
+        cursor: pointer;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.18);
+        border-color: #f5d77a;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .time {
+        color: #f5d77a;
+        font-size: 35px;
+        margin-bottom: 12px;
+      }
+
+      .name {
+        color: white;
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      /* Footer */
+
+      footer {
+        margin-top: 40px;
+        color: #c4ddd3;
+        font-size: 16px;
+      }
+
+      /* Responsive */
+
+      @media (max-width: 768px) {
+        #container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        header h1 {
+          font-size: 30px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        #container {
+          grid-template-columns: 1fr;
+        }
+
+        .card {
+          padding: 25px;
+        }
+
+        .time {
+          font-size: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="logo">☪</div>
+        <h1>Namoz vaqtlari</h1>
+        <p>Toshkent shahri uchun bugungi namoz vaqtlari</p>
+      </header>
+
+      <div id="container"></div>
+
+      <footer>
+        <p>☪ Ibodatlaringiz qabul bo‘lsin!</p>
+      </footer>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
